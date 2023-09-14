@@ -15,12 +15,13 @@ function ContactForm() {
     });
   };
 
-  const handleSubmit = (e) => {
-    // Handle form submission here
-  };
 
   return (
-    <form onSubmit={handleSubmit} method="post" name="contact" netlify>
+    <form
+      method="post"
+      name="contact"
+      data-netlify="true"
+    >
       <input type="hidden" name="form-name" value="contact"></input>
       <input
         type="text"
