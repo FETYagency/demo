@@ -20,7 +20,7 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit} data-netlify="true">
+    <form onSubmit={handleSubmit} method="post" data-netlify="true">
       <input
         type="text"
         name="name"
