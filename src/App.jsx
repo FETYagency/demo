@@ -9,7 +9,7 @@ function App() {
         class="form"
         method="POST"
         name="contact"
-        action="/"
+        action=""
         data-netlify="true"
         className="flex flex-col gap-6"
       >
