@@ -12,6 +12,7 @@ function App() {
         action=""
         data-netlify="true"
         className="flex flex-col gap-6"
+        onSubmit={e=>e.preventDefault()}
       >
         <input type="text" name="name" placeholder="name" required />
         <input type="email" name="email" placeholder="email" />
