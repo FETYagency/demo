@@ -17,6 +17,7 @@ function App() {
         <input type="email" name="email" placeholder="email" />
         <button className="border-red-400 bg-slate-400">Submit</button>
       </form>
+      <a href="/success.html"></a>
     </div>
   );
 }
