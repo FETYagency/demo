@@ -9,14 +9,13 @@ function App() {
         class="form"
         method="POST"
         name="contact"
-        action=""
+        action="/success"
         data-netlify="true"
         className="flex flex-col gap-6"
-        onSubmit={e=>e.preventDefault()}
       >
         <input type="text" name="name" placeholder="name" required />
         <input type="email" name="email" placeholder="email" />
-        <button className="bg-slate-400 border-red-400">Submit</button>
+        <button className="border-red-400 bg-slate-400">Submit</button>
       </form>
     </div>
   );
