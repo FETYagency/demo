@@ -9,7 +9,7 @@ function App() {
         class="form"
         method="POST"
         name="contact"
-        action="/success.html"
+        action="success.html"
         data-netlify="true"
         className="flex flex-col gap-6"
       >
@@ -17,7 +17,7 @@ function App() {
         <input type="email" name="email" placeholder="email" />
         <button className="border-red-400 bg-slate-400">Submit</button>
       </form>
-      <a href="/success.html"></a>
+      <a href="/success.html"> click me</a>
     </div>
   );
 }
