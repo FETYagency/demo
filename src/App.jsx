@@ -21,6 +21,7 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} method="post" name="contact" netlify>
+      <input type="hidden" name="form-name" value="contact"></input>
       <input
         type="text"
         name="name"
