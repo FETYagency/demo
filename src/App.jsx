@@ -1,25 +1,50 @@
 import React, { useState } from "react";
 
-function App() {
-  const [count, setCount] = useState(0);
+function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission here
+  };
 
   return (
-    <div className="grid h-[100vh] place-items-center bg-emerald-300">
-      <form
-        class="form"
-        method="POST"
-        name="contact"
-        action="success.html"
-        data-netlify="true"
-        className="flex flex-col gap-6"
-      >
-        <input type="text" name="name" placeholder="name" required />
-        <input type="email" name="email" placeholder="email" />
-        <button className="border-red-400 bg-slate-400">Submit</button>
-      </form>
-      <a href="/success.html"> click me</a>
-    </div>
+    <form onSubmit={handleSubmit} data-netlify="true">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={formData.name}
+        onChange={handleChange}
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        value={formData.email}
+        onChange={handleChange}
+      />
+      <textarea
+        name="message"
+        placeholder="Message"
+        value={formData.message}
+        onChange={handleChange}
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
   );
 }
 
-export default App;
+export default ContactForm;
